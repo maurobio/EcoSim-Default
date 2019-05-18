@@ -5052,7 +5052,9 @@ void Ecosystem::snap(){
 	//-- Open file for writing
 	ostringstream o;
 	o << "./" << "//Image";
+	#ifdef LinuxSystem
 	mkdir(o.str().c_str(), 0777);
+	#endif
 	
 	Position p;
 	int cnt=0,cnt2, flag=0;
